@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Visible Windmill Spinner Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            overflow: hidden;
+        }
+
+        .spinner-effect {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: conic-gradient(
+                red,
+                orange,
+                yellow,
+                lime,
+                cyan,
+                blue,
+                magenta,
+                red
+            );
+            animation: spin 5s linear infinite;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        img {
+            max-width: 70%;
+            max-height: 70%;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner-effect"></div>
+    <img src="1704324096953_ins.jpg" alt="Centered Image">
+</body>
+</html>
